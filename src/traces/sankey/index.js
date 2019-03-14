@@ -15,6 +15,10 @@ Plot.supplyDefaults = require('./defaults');
 Plot.calc = require('./calc');
 Plot.plot = require('./plot');
 
+Plot.selectPoints = function(a, b, c) {
+    console.log(a, b, c);
+};
+
 Plot.moduleType = 'trace';
 Plot.name = 'sankey';
 Plot.basePlotModule = require('./base_plot');
