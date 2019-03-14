@@ -520,6 +520,11 @@ function determineSearchTraces(gd, xAxes, yAxes, subplot) {
             var info = createSearchInfo(trace._module, cd, xAxes[0], yAxes[0]);
             info.scene = gd._fullLayout._splomScenes[trace.uid];
             searchTraces.push(info);
+        } else if(
+          trace.type === 'sankey'
+        ) {
+            var sankeyInfo = createSearchInfo(trace._module, cd, xAxes[0], yAxes[0]);
+            searchTraces.push(sankeyInfo);
         } else {
             if(xAxisIds.indexOf(trace.xaxis) === -1) continue;
             if(yAxisIds.indexOf(trace.yaxis) === -1) continue;
